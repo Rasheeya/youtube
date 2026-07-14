@@ -1,0 +1,42 @@
+.page-banner {
+      padding: 14rem 5% 10rem;
+      background: url('../assets/hero_categories.webp') no-repeat center center/cover;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .page-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .category-section {
+      padding: 4rem 5%;
+    }
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+    }
+    .category-header h2 {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .view-all {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    .view-all:hover {
+      text-decoration: underline;
+    }
+
+/* === CONTENT PAGE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .video-grid, .creator-grid, .category-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+

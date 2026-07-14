@@ -1,0 +1,175 @@
+@import url("style.css");
+
+:root {
+    --bg-dark: #0a0a0a;
+    --card-bg: #121212;
+    --input-bg: #181818;
+    --border-color: #2a2a2a;
+    --text-main: #ffffff;
+    --text-muted: #888888;
+    --accent-rust: var(--accent-cyan);
+    --accent-orange: var(--accent-blue);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-dark);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('../assets/image_72fdedba.webp');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-main);
+    padding: 2rem;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 440px;
+    padding: 3rem 2.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo-container i { color: var(--accent-orange); font-size: 1.75rem; }
+
+.header-text { text-align: center; margin-bottom: 2.5rem; }
+.header-text h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.5px; }
+.header-text p { color: var(--text-muted); font-size: 0.95rem; }
+
+.form-group { margin-bottom: 1.5rem; }
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-wrapper { position: relative; }
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+input::placeholder { color: #555; }
+input:focus { border-color: #555; background-color: #1a1a1a; }
+
+.eye-icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.eye-icon:hover { color: var(--text-main); }
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 2px;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+    background-color: var(--accent-rust);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-rust);
+    color: #ffffff;
+    border: none;
+    padding: 1.125rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    margin-bottom: 2rem;
+}
+
+.btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-submit:active { transform: translateY(1px); }
+
+.footer-text { text-align: center; font-size: 0.95rem; color: var(--text-muted); }
+.footer-text a { color: var(--accent-rust); text-decoration: none; font-weight: 600; margin-left: 0.25rem; }
+.footer-text a:hover { text-decoration: underline; }
+.auth-logo {
+    height: 60px;
+    width: auto;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+
+/* === FORMS RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .auth-container, .contact-wrapper, .form-container {
+    width: 90% !important;
+    padding: 1.5rem !important;
+    margin: 1rem auto !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-2 { grid-template-columns: 1fr !important; }
+}
+

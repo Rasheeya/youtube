@@ -1,0 +1,15 @@
+@import url("style.css");
+
+.service-list { display: flex; flex-direction: column; gap: 4rem; }
+.service-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.service-row:nth-child(even) .service-img-wrapper { order: 2; }
+.service-row:nth-child(even) .service-content { order: 1; }
+.service-img { width: 100%; border-radius: 12px; border: var(--card-border); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+.service-content h3 { font-size: 2rem; margin-bottom: 1rem; color: var(--accent-cyan); }
+.service-features { margin-top: 1.5rem; }
+.service-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; font-weight: 500; }
+.service-features i { color: var(--accent-cyan); }
+@media (max-width: 768px) {
+    .service-row { grid-template-columns: 1fr; gap: 2rem; }
+    .service-row:nth-child(even) .service-img-wrapper, .service-row:nth-child(even) .service-content { order: unset; }
+}

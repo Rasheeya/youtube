@@ -1,0 +1,70 @@
+.page-banner {
+      padding: 14rem 5% 10rem;
+      background: url('../assets/hero_creators.webp') no-repeat center center/cover;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+      color: white;
+    }
+    .page-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .creator-profile-card {
+      background: var(--surface-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition-normal);
+      border: 1px solid var(--border-color);
+    }
+    .creator-profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      border-color: var(--primary-color);
+    }
+    .creator-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 3px solid var(--primary-color);
+    }
+    .analytics-box {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .analytics-box h4 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .analytics-box p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    .highlight-post {
+      display: flex;
+      gap: 1.5rem;
+      background: var(--surface-color);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      align-items: center;
+    }
+    .highlight-post img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+
+/* === CONTENT PAGE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .video-grid, .creator-grid, .category-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+

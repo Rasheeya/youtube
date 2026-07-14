@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+  <div id="page-loader"><div class="loader-pulse"></div></div>
+
+  <div class="dashboard-mobile-header">
+    <div class="dashboard-menu-toggle"><i class="fa-solid fa-bars"></i></div>
+    <img src="./assets/logo.webp" alt="Stackly Logo">
+  </div>
+  <div class="sidebar-overlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+
+
+    <a href="index.html" class="nav-brand"><img src="./assets/logo.webp" alt="Stackly Logo" style="height: 50px; margin-right: 50px; vertical-align: middle;"></a>
+
+    <div class="sidebar-menu">
+      <a href="#" data-tab="tab-overview" class="active"><i class="fa-solid fa-border-all"></i> Overview</a>
+      <a href="#" data-tab="tab-users"><i class="fa-regular fa-user"></i> Users</a>
+      <a href="#" data-tab="tab-videos"><i class="fa-solid fa-play"></i> Videos</a>
+      <a href="#" data-tab="tab-creators"><i class="fa-regular fa-star"></i> Creators</a>
+      <a href="#" data-tab="tab-comments"><i class="fa-regular fa-comment"></i> Comments</a>
+      <a href="#" data-tab="tab-settings"><i class="fa-solid fa-gear"></i> Settings</a>
+      <a href="login.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+
+    </div>
+
+    <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="premium-card reveal">
+      <div class="premium-icon"><i class="fa-solid fa-play"></i></div>
+      <h4>Go Premium</h4>
+      <p>Unlock advanced analytics and exclusive features.</p>
+      <button onclick="window.location.href='404.html'" class="btn-upgrade">Upgrade Now</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search here...">
+      </div>
+      <div class="topbar-right">
+        <div class="notification">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge">5</span>
+        </div>
+        <div class="user-profile">
+          <div class="avatar"><i class="fa-regular fa-user"></i></div>
+          <div class="user-info">
+            <strong>Admin</strong>
+            <span>Super Admin</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Tab Overview -->
+    <div id="tab-overview" class="tab-content active">
+      <!-- Page Header -->
+      <div class="page-header">
+      <div>
+        <h1>Admin Overview</h1>
+        <p>Welcome back, Admin! Here's what's happening on Stackly.</p>
+      </div>
+      <div class="date-picker">
+        <i class="fa-regular fa-calendar"></i>
+        <span>May 31 - Jun 6, 2025</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="stat-details">
+          <h4>Total Users</h4>
+          <div class="value">12,458</div>
+          <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> 12.5% <span>from last week</span></span>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <div class="stat-icon"><i class="fa-solid fa-play"></i></div>
+        <div class="stat-details">
+          <h4>Total Videos</h4>
+          <div class="value">3,245</div>
+          <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> 8.3% <span>from last week</span></span>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <div class="stat-icon"><i class="fa-regular fa-user"></i></div>
+        <div class="stat-details">
+          <h4>Total Creators</h4>
+          <div class="value">842</div>
+          <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> 15.7% <span>from last week</span></span>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <div class="stat-icon"><i class="fa-regular fa-eye"></i></div>
+        <div class="stat-details">
+          <h4>Total Views</h4>
+          <div class="value">1.25M</div>
+          <span class="trend positive"><i class="fa-solid fa-arrow-up"></i> 18.6% <span>from last week</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Grid (Middle) -->
+    <div class="charts-grid-2">
+      <!-- Bar Chart Mockup -->
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="card-header reveal">
+          <h3>Views Overview</h3>
+          <div class="dropdown">This Week <i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+        <div class="bar-chart">
+          <div class="y-axis">
+            <span>250K</span><span>200K</span><span>150K</span><span>100K</span><span>50K</span><span>0</span>
+          </div>
+          <div class="bars">
+            <div class="bar-group">
+              <div class="bar" style="height: 40%;"></div>
+              <span class="label">May 31</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 60%;"></div>
+              <span class="label">Jun 1</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 70%;"></div>
+              <span class="label">Jun 2</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 50%;"></div>
+              <span class="label">Jun 3</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 70%;"></div>
+              <span class="label">Jun 4</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 60%;"></div>
+              <span class="label">Jun 5</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar" style="height: 90%;"></div>
+              <span class="label">Jun 6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donut Chart 1 -->
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="card-header reveal">
+          <h3>Users by Country</h3>
+        </div>
+        <div class="donut-chart-container">
+          <div class="donut-chart country-chart"></div>
+          <div class="chart-legend">
+            <div class="legend-item"><span class="dot" style="background: #ff0033;"></span> India <span class="pct">45%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #ff4d6d;"></span> USA <span class="pct">20%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #c9184a;"></span> UK <span class="pct">10%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #800f2f;"></span> Canada <span class="pct">8%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #590d22;"></span> Australia <span class="pct">7%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #3a0ca3;"></span> Others <span class="pct">10%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Grid (Bottom) -->
+    <div class="charts-grid-3">
+      <!-- Donut Chart 2 -->
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="card-header reveal">
+          <h3>Top Categories</h3>
+        </div>
+        <div class="donut-chart-container" style="flex-direction: column; align-items: center; justify-content: center; gap: 2rem;">
+          <div class="donut-chart category-chart" style="width: 120px; height: 120px;"></div>
+          <div class="chart-legend" style="width: 100%;">
+            <div class="legend-item"><span class="dot" style="background: #ff0033;"></span> Entertainment <span class="pct">40%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #ff4d6d;"></span> Music <span class="pct">20%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #c9184a;"></span> Education <span class="pct">15%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #800f2f;"></span> Gaming <span class="pct">15%</span></div>
+            <div class="legend-item"><span class="dot" style="background: #3a0ca3;"></span> News <span class="pct">10%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line Chart Mockup -->
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="card-header reveal">
+          <h3>New Users</h3>
+          <div class="dropdown">This Week <i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+        <div class="line-chart">
+           <div class="y-axis">
+            <span>1K</span><span>750</span><span>500</span><span>250</span><span>0</span>
+          </div>
+          <div class="line-area">
+             <svg viewBox="0 0 400 200" preserveAspectRatio="none">
+               <polyline points="0,150 50,100 100,120 150,80 200,110 250,100 300,100 350,50 400,40" fill="none" stroke="#ff0033" stroke-width="3" filter="drop-shadow(0 5px 5px rgba(255,0,51,0.5))"/>
+               <!-- Points -->
+               <circle cx="0" cy="150" r="4" fill="#ff0033" />
+               <circle cx="50" cy="100" r="4" fill="#ff0033" />
+               <circle cx="100" cy="120" r="4" fill="#ff0033" />
+               <circle cx="150" cy="80" r="4" fill="#ff0033" />
+               <circle cx="200" cy="110" r="4" fill="#ff0033" />
+               <circle cx="250" cy="100" r="4" fill="#ff0033" />
+               <circle cx="300" cy="100" r="4" fill="#ff0033" />
+               <circle cx="350" cy="50" r="4" fill="#ff0033" />
+               <circle cx="400" cy="40" r="4" fill="#ff0033" />
+             </svg>
+             <div class="x-axis">
+                <span>May 31</span><span>Jun 1</span><span>Jun 2</span><span>Jun 3</span><span>Jun 4</span><span>Jun 5</span><span>Jun 6</span>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activities -->
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="card-header reveal">
+          <h3>Recent Activities</h3>
+        </div>
+        <div class="activities-list">
+          <div class="activity-item">
+            <div class="icon-wrap"><i class="fa-solid fa-play"></i></div>
+            <p>New video uploaded by TechGuru</p>
+            <span class="time">2m ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="icon-wrap"><i class="fa-regular fa-user"></i></div>
+            <p>User Sarah123 registered</p>
+            <span class="time">8m ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="icon-wrap"><i class="fa-regular fa-star"></i></div>
+            <p>New creator CryptoKing verified</p>
+            <span class="time">15m ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="icon-wrap"><i class="fa-solid fa-play"></i></div>
+            <p>Video "AI Revolution" crossed 10K views</p>
+            <span class="time">25m ago</span>
+          </div>
+          <div class="activity-item">
+            <div class="icon-wrap"><i class="fa-regular fa-comment"></i></div>
+            <p>New comment on Tech Review</p>
+            <span class="time">32m ago</span>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div> <!-- End tab-overview -->
+
+    <div id="tab-users" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>User Management</h1>
+          <p>Manage platform users here.</p>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal" style="overflow-x: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem;">
+          <input type="text" placeholder="Search by name or email..." style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px; width: 300px;">
+          <select style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px;">
+            <option value="all">All Statuses</option>
+            <option value="active">Active</option>
+            <option value="suspended">Suspended</option>
+            <option value="pending">Pending</option>
+          </select>
+          <button class="btn btn-primary" style="margin-left: auto;" onclick="window.location.href='404.html'">Export CSV</button>
+        </div>
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <th style="padding: 1rem;">User</th>
+              <th style="padding: 1rem;">Email</th>
+              <th style="padding: 1rem;">Status</th>
+              <th style="padding: 1rem;">Joined Date</th>
+              <th style="padding: 1rem;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_18.webp" style="border-radius:50%;"> John Doe</td>
+              <td style="padding: 1rem;">john@example.com</td>
+              <td style="padding: 1rem;"><span style="color: #00ff00;">Active</span></td>
+              <td style="padding: 1rem;">Jun 1, 2025</td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Edit</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_19.webp" style="border-radius:50%;"> Jane Smith</td>
+              <td style="padding: 1rem;">jane@example.com</td>
+              <td style="padding: 1rem;"><span style="color: #ff0000;">Suspended</span></td>
+              <td style="padding: 1rem;">May 28, 2025</td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Edit</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_20.webp" style="border-radius:50%;"> Mike Johnson</td>
+              <td style="padding: 1rem;">mike@example.com</td>
+              <td style="padding: 1rem;"><span style="color: #00ff00;">Active</span></td>
+              <td style="padding: 1rem;">May 15, 2025</td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Edit</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_21.webp" style="border-radius:50%;"> Alice Brown</td>
+              <td style="padding: 1rem;">alice@example.com</td>
+              <td style="padding: 1rem;"><span style="color: #ffa500;">Pending</span></td>
+              <td style="padding: 1rem;">Jun 6, 2025</td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Edit</button></td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_22.webp" style="border-radius:50%;"> Robert Lee</td>
+              <td style="padding: 1rem;">robert@example.com</td>
+              <td style="padding: 1rem;"><span style="color: #00ff00;">Active</span></td>
+              <td style="padding: 1rem;">Apr 12, 2025</td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+          <span>Showing 1 to 5 of 1,240 entries</span>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-outline" style="padding: 0.3rem 0.8rem;" onclick="window.location.href='404.html'">Previous</button>
+            <button class="btn btn-primary" style="padding: 0.3rem 0.8rem;" onclick="window.location.href='404.html'">1</button>
+            <button class="btn btn-outline" style="padding: 0.3rem 0.8rem;" onclick="window.location.href='404.html'">2</button>
+            <button class="btn btn-outline" style="padding: 0.3rem 0.8rem;" onclick="window.location.href='404.html'">3</button>
+            <button class="btn btn-outline" style="padding: 0.3rem 0.8rem;" onclick="window.location.href='404.html'">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-videos" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>Video Moderation</h1>
+          <p>Review and manage videos.</p>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem;">
+          <input type="text" placeholder="Search videos..." style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px; width: 300px;">
+          <select style="padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px;">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="most_flagged">Most Flagged</option>
+          </select>
+        </div>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+          <img src="assets/mock_120x70_23.webp" style="border-radius: 4px;">
+          <div style="flex: 1;">
+            <h4>How to build a SaaS</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">By CodeMaster • Uploaded 2 hours ago</p>
+          </div>
+          <button class="btn btn-primary" style="padding: 0.5rem 1rem;" onclick="window.location.href='404.html'">Approve</button>
+          <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-color: red; color: red;" onclick="window.location.href='404.html'">Reject</button>
+        </div>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+          <img src="assets/mock_120x70_24.webp" style="border-radius: 4px;">
+          <div style="flex: 1;">
+            <h4>My Morning Routine 2026</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">By JaneVlogs • Uploaded 5 hours ago</p>
+          </div>
+          <button class="btn btn-primary" style="padding: 0.5rem 1rem;" onclick="window.location.href='404.html'">Approve</button>
+          <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-color: red; color: red;" onclick="window.location.href='404.html'">Reject</button>
+        </div>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+          <img src="assets/mock_120x70_25.webp" style="border-radius: 4px;">
+          <div style="flex: 1;">
+            <h4>Let's play Space Explorers</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">By GamerX • Uploaded 6 hours ago</p>
+          </div>
+          <button class="btn btn-primary" style="padding: 0.5rem 1rem;" onclick="window.location.href='404.html'">Approve</button>
+          <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-color: red; color: red;" onclick="window.location.href='404.html'">Reject</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-categories" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>Categories</h1>
+          <p>Manage content categories.</p>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='404.html'">Add New Category</button>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+          <strong>Technology</strong>
+          <i class="fa-solid fa-pen" style="color: var(--text-secondary); cursor: pointer;"></i>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+          <strong>Gaming</strong>
+          <i class="fa-solid fa-pen" style="color: var(--text-secondary); cursor: pointer;"></i>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+          <strong>Music</strong>
+          <i class="fa-solid fa-pen" style="color: var(--text-secondary); cursor: pointer;"></i>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+          <strong>Education</strong>
+          <i class="fa-solid fa-pen" style="color: var(--text-secondary); cursor: pointer;"></i>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+          <strong>Entertainment</strong>
+          <i class="fa-solid fa-pen" style="color: var(--text-secondary); cursor: pointer;"></i>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
+          <strong>News & Politics</strong>
+          <i class="fa-solid fa-pen" style="color: var(--text-secondary); cursor: pointer;"></i>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-creators" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>Creators</h1>
+          <p>Manage verified creators.</p>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <th style="padding: 1rem;">Creator</th>
+              <th style="padding: 1rem;">Subscribers</th>
+              <th style="padding: 1rem;">Status</th>
+              <th style="padding: 1rem;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_26.webp" style="border-radius:50%;"> TechNinja</td>
+              <td style="padding: 1rem;">1.2M</td>
+              <td style="padding: 1rem;"><span style="color: #00ff00;">Verified</span></td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Manage</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_27.webp" style="border-radius:50%;"> CodeMaster</td>
+              <td style="padding: 1rem;">850K</td>
+              <td style="padding: 1rem;"><span style="color: #00ff00;">Verified</span></td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Manage</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_28.webp" style="border-radius:50%;"> ChefJohn</td>
+              <td style="padding: 1rem;">2.4M</td>
+              <td style="padding: 1rem;"><span style="color: #00ff00;">Verified</span></td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Manage</button></td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; display: flex; align-items: center; gap: 1rem;"><img src="assets/mock_40x40_29.webp" style="border-radius:50%;"> NewCreator123</td>
+              <td style="padding: 1rem;">10.5K</td>
+              <td style="padding: 1rem;"><span style="color: #ffa500;">Pending Review</span></td>
+              <td style="padding: 1rem;"><button class="btn btn-outline" style="padding: 0.3rem 0.6rem;" onclick="window.location.href='404.html'">Manage</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-analytics" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>Deep Analytics</h1>
+          <p>Detailed platform metrics.</p>
+        </div>
+      </div>
+      <div class="charts-grid-2">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+          <h3>Retention Rate</h3>
+          <p style="font-size: 2rem; margin-top: 1rem; font-weight: bold; color: var(--primary-color);">68%</p>
+          <p style="color: var(--text-secondary); margin-top: 0.5rem;">+5% from last month</p>
+        </div>
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+          <h3>Ad Revenue</h3>
+          <p style="font-size: 2rem; margin-top: 1rem; font-weight: bold; color: #00ff00;">$145,200</p>
+          <p style="color: var(--text-secondary); margin-top: 0.5rem;">Estimated this month</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-comments" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>Comments Moderation</h1>
+          <p>Review flagged comments.</p>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <strong>User123</strong>
+            <span style="color: red; font-size: 0.8rem;">Flagged for Spam</span>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Check out my free gift card link here! [spam link]</p>
+          <button class="btn btn-outline" style="padding: 0.3rem 0.8rem; border-color: red; color: red;" onclick="window.location.href='404.html'">Delete Comment</button>
+          <button class="btn btn-outline" style="padding: 0.3rem 0.8rem; margin-left: 0.5rem;" onclick="window.location.href='404.html'">Ignore Flag</button>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <strong>Hater99</strong>
+            <span style="color: red; font-size: 0.8rem;">Flagged for Harassment</span>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">You are the worst creator ever, delete your channel!</p>
+          <button class="btn btn-outline" style="padding: 0.3rem 0.8rem; border-color: red; color: red;" onclick="window.location.href='404.html'">Delete Comment & Ban</button>
+          <button class="btn btn-outline" style="padding: 0.3rem 0.8rem; margin-left: 0.5rem;" onclick="window.location.href='404.html'">Ignore Flag</button>
+        </div>
+        <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+            <strong>BotAccount42</strong>
+            <span style="color: red; font-size: 0.8rem;">Flagged for Spam</span>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Earn $5000 a day working from home by clicking here!</p>
+          <button class="btn btn-outline" style="padding: 0.3rem 0.8rem; border-color: red; color: red;" onclick="window.location.href='404.html'">Delete Comment</button>
+          <button class="btn btn-outline" style="padding: 0.3rem 0.8rem; margin-left: 0.5rem;" onclick="window.location.href='404.html'">Ignore Flag</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-reports" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>System Reports</h1>
+          <p>Platform health and user reports.</p>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal">
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 1rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+            <i class="fa-solid fa-triangle-exclamation" style="color: #ffa500; font-size: 1.5rem;"></i>
+            <div>
+              <strong>High Server Load Detected</strong>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">CPU usage exceeded 90% on DB node 3.</p>
+            </div>
+            <span style="margin-left: auto; color: var(--text-secondary); font-size: 0.8rem;">10m ago</span>
+          </li>
+          <li style="padding: 1rem; display: flex; align-items: center; gap: 1rem;">
+            <i class="fa-solid fa-check-circle" style="color: #00ff00; font-size: 1.5rem;"></i>
+            <div>
+              <strong>Daily Backup Completed</strong>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">All user data successfully backed up to cold storage.</p>
+            </div>
+            <span style="margin-left: auto; color: var(--text-secondary); font-size: 0.8rem;">2h ago</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tab-settings" class="tab-content">
+      <div class="page-header">
+        <div>
+          <h1>Platform Settings</h1>
+          <p>Configure global settings.</p>
+        </div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="dashboard-card reveal" style="max-width: 600px;">
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Site Name</label>
+          <input type="text" value="Stackly" style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px;">
+        </div>
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Admin Email Contact</label>
+          <input type="email" value="admin@stackly.com" style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px;">
+        </div>
+        <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <strong>Maintenance Mode</strong>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Take the platform offline for users.</p>
+          </div>
+          <input type="checkbox" style="width: 20px; height: 20px;">
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='404.html'">Save Settings</button>
+      </div>
+    </div>
+
+  </main>
+  <script src="js/main.js?v=5"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</body>
+</html>

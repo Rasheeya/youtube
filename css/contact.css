@@ -1,0 +1,95 @@
+.page-banner {
+      padding: 14rem 5% 10rem;
+      background: url('../assets/hero_contact.webp') no-repeat center center/cover;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .page-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      padding: 5rem 5%;
+    }
+    .contact-info-card {
+      background: var(--surface-color);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+    .info-item {
+      margin-bottom: 1.5rem;
+    }
+    .info-item h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .contact-form {
+      background: var(--surface-color);
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(0,0,0,0.2);
+      color: white;
+      outline: none;
+      transition: var(--transition-fast);
+      font-family: inherit;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--primary-color);
+    }
+    .faq-item {
+      background: var(--surface-color);
+      margin-bottom: 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--text-secondary);
+    }
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+/* === FORMS RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .auth-container, .contact-wrapper, .form-container {
+    width: 90% !important;
+    padding: 1.5rem !important;
+    margin: 1rem auto !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-2 { grid-template-columns: 1fr !important; }
+}
+

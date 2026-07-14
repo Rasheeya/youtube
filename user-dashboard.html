@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard - Stackly</title>
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/user-dashboard.css?v=5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="page-loader"><div class="loader-pulse"></div></div>
+
+  <div class="dashboard-mobile-header">
+    <div class="dashboard-menu-toggle"><i class="fa-solid fa-bars"></i></div>
+    <img src="./assets/logo.webp" alt="Stackly Logo">
+  </div>
+  <div class="sidebar-overlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+
+
+    <a href="index.html" class="nav-brand"><img src="./assets/logo.webp" alt="Stackly Logo" style="height: 50px; margin-right: 50px; vertical-align: middle;"></a>
+    <div class="sidebar-menu">
+      <a href="#" data-tab="tab-dashboard" class="active"><i class="fa-solid fa-chart-simple"></i> Dashboard</a>
+      <a href="#" data-tab="tab-profile"><i class="fa-solid fa-user"></i> My Profile</a>
+      <a href="#" data-tab="tab-history"><i class="fa-solid fa-clock-rotate-left"></i> Watch History</a>
+      <a href="#" data-tab="tab-playlists"><i class="fa-solid fa-list"></i> Playlists</a>
+      <a href="#" data-tab="tab-liked"><i class="fa-solid fa-heart"></i> Liked Videos</a>
+      <a href="#" data-tab="tab-subscriptions"><i class="fa-solid fa-bell"></i> Subscriptions</a>
+      <a href="#" data-tab="tab-downloads"><i class="fa-solid fa-download"></i> Downloads</a>
+      <a href="login.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div id="tab-dashboard" class="tab-content active">
+      <div class="topbar reveal">
+      <h2>Welcome back, User</h2>
+      <div class="user-profile">
+        <span style="color: var(--text-secondary);">Premium Member</span>
+        <img src="assets/user-avatar.webp" onerror="this.src='https://via.placeholder.com/40/0000ff/ffffff?text=U'">
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid reveal">
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <h4>Watch Time (This Week)</h4>
+        <div class="value">14.5 hrs</div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <h4>Videos Watched</h4>
+        <div class="value">128</div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <h4>Favorite Category</h4>
+        <div class="value">Tech</div>
+      </div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
+        <h4>Liked Videos</h4>
+        <div class="value">342</div>
+      </div>
+    </div>
+
+    <!-- Recommended Videos -->
+    <div class="content-section reveal" style="transition-delay: 0.1s">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3>Recommended Videos</h3>
+        <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="window.location.href='404.html'">View All</button>
+      </div>
+      <div class="video-row">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+          <img src="assets/rv1.webp" onerror="this.src='https://via.placeholder.com/250x140/1a1a1f/ff0000?text=RV1'">
+          <div class="info">
+            <h4>Next.js 14 Crash Course</h4>
+            <p>CodeMaster • 1M views</p>
+          </div>
+        </div>
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+          <img src="assets/rv2.webp" onerror="this.src='https://via.placeholder.com/250x140/1a1a1f/ff0000?text=RV2'">
+          <div class="info">
+            <h4>My Daily Setup</h4>
+            <p>TechNinja • 500K views</p>
+          </div>
+        </div>
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+          <img src="assets/rv3.webp" onerror="this.src='https://via.placeholder.com/250x140/1a1a1f/ff0000?text=RV3'">
+          <div class="info">
+            <h4>Cooking 101</h4>
+            <p>ChefJohn • 2M views</p>
+          </div>
+        </div>
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+          <img src="assets/rv4.webp" onerror="this.src='https://via.placeholder.com/250x140/1a1a1f/ff0000?text=RV4'">
+          <div class="info">
+            <h4>Space Exploration 2026</h4>
+            <p>AstroHub • 800K views</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recently Watched -->
+    <div class="content-section reveal" style="transition-delay: 0.2s">
+      <h3>Recently Watched</h3>
+      <div class="video-row">
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+          <img src="assets/rw1.webp" onerror="this.src='https://via.placeholder.com/250x140/1a1a1f/ff0000?text=RW1'">
+          <div class="info">
+            <h4>Learn CSS Grid</h4>
+            <p>Watched 2 hours ago</p>
+          </div>
+        </div>
+        <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+          <img src="assets/rw2.webp" onerror="this.src='https://via.placeholder.com/250x140/1a1a1f/ff0000?text=RW2'">
+          <div class="info">
+            <h4>Top 10 Gadgets</h4>
+            <p>Watched yesterday</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscription Updates & Activity -->
+    <div class="grid grid-2 reveal" style="transition-delay: 0.3s; gap: 2rem;">
+      <div>
+        <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">Subscription Updates</h3>
+        <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <img src="assets/su1.webp" onerror="this.src='https://via.placeholder.com/40/ff0000/fff'" style="border-radius: 50%; width: 40px; height: 40px;">
+            <div>
+              <strong>Sarah Vlogs</strong> uploaded a new video.
+              <p style="color: var(--text-secondary); font-size: 0.8rem;">10 mins ago</p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <img src="assets/su2.webp" onerror="this.src='https://via.placeholder.com/40/ff0000/fff'" style="border-radius: 50%; width: 40px; height: 40px;">
+            <div>
+              <strong>TechDaily</strong> is live now!
+              <p style="color: var(--text-secondary); font-size: 0.8rem;">Started 5 mins ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">Activity Timeline</h3>
+        <div style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem;">
+          <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-thumbs-up"></i> Liked "Web Design Trends 2026"</p>
+          <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-comment"></i> Commented on "Gaming Highlights"</p>
+          <p><i class="fa-solid fa-bell"></i> Subscribed to CodeMaster</p>
+        </div>
+      </div>
+    </div>
+    </div> <!-- End tab-dashboard -->
+
+    <div id="tab-profile" class="tab-content">
+      <div class="topbar reveal">
+        <h2>My Profile</h2>
+      </div>
+      <div class="content-section reveal">
+        <div style="background: var(--surface-color); padding: 2rem; border-radius: var(--radius-lg); max-width: 600px;">
+          <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+            <img src="assets/user-avatar.webp" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/100/0000ff/ffffff?text=U'">
+            <button class="btn btn-outline" onclick="window.location.href='404.html'">Change Avatar</button>
+          </div>
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Full Name</label>
+            <input type="text" value="User Name" style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Email</label>
+            <input type="email" value="user@stackly.com" style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; border-radius: 4px;">
+          </div>
+          <button class="btn btn-primary" onclick="window.location.href='404.html'">Save Changes</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="tab-history" class="tab-content">
+      <div class="topbar reveal">
+        <h2>Watch History</h2>
+      </div>
+      <div class="content-section reveal">
+        <div class="video-row" style="margin-bottom: 2rem;">
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_1.webp">
+            <div class="info">
+              <h4>Advanced React Patterns</h4>
+              <p>Watched today</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_2.webp">
+            <div class="info">
+              <h4>Top 10 Laptops 2026</h4>
+              <p>Watched yesterday</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_3.webp">
+            <div class="info">
+              <h4>City Walking Tour</h4>
+              <p>Watched 2 days ago</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_4.webp">
+            <div class="info">
+              <h4>Ultimate Desk Setup</h4>
+              <p>Watched 3 days ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-row" style="margin-bottom: 2rem;">
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_5.webp">
+            <div class="info">
+              <h4>Learn Next.js 14</h4>
+              <p>Watched 4 days ago</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_6.webp">
+            <div class="info">
+              <h4>SpaceX Launch Live</h4>
+              <p>Watched 1 week ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="tab-playlists" class="tab-content">
+      <div class="topbar reveal">
+        <h2>My Playlists</h2>
+      </div>
+      <div class="grid grid-3 mt-2 reveal">
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+          <h3>Web Dev Tutorials</h3>
+          <p style="color: var(--text-secondary);">12 Videos</p>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <i class="fa-solid fa-music" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+          <h3>Focus Music</h3>
+          <p style="color: var(--text-secondary);">45 Videos</p>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <i class="fa-solid fa-gamepad" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+          <h3>Gaming Highlights</h3>
+          <p style="color: var(--text-secondary);">8 Videos</p>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <i class="fa-solid fa-dumbbell" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+          <h3>Workout Routine</h3>
+          <p style="color: var(--text-secondary);">22 Videos</p>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <i class="fa-solid fa-plane" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+          <h3>Travel Vlogs</h3>
+          <p style="color: var(--text-secondary);">30 Videos</p>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center; border: 2px dashed var(--border-color); display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer;">
+          <i class="fa-solid fa-plus" style="font-size: 2rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+          <h3>Create New</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-liked" class="tab-content">
+      <div class="topbar reveal">
+        <h2>Liked Videos</h2>
+      </div>
+      <div class="content-section reveal">
+        <div class="video-row" style="margin-bottom: 2rem;">
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_7.webp">
+            <div class="info">
+              <h4>CSS Animations Guide</h4>
+              <p>CodeMaster</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_8.webp">
+            <div class="info">
+              <h4>Future Tech 2030</h4>
+              <p>TechNinja</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_9.webp">
+            <div class="info">
+              <h4>How to cook Pasta</h4>
+              <p>ChefJohn</p>
+            </div>
+          </div>
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_10.webp">
+            <div class="info">
+              <h4>Mars Rover Landing</h4>
+              <p>AstroHub</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-row">
+          <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
+            <img src="assets/mock_250x140_11.webp">
+            <div class="info">
+              <h4>Smart City UI Design</h4>
+              <p>DesignPro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-subscriptions" class="tab-content">
+      <div class="topbar reveal">
+        <h2>Subscriptions</h2>
+      </div>
+      <div class="grid grid-4 mt-2 reveal">
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <img src="assets/mock_80x80_12.webp" style="border-radius: 50%; margin-bottom: 1rem;">
+          <h3>CodeMaster</h3>
+          <button class="btn btn-outline mt-1" style="width: 100%; padding: 0.5rem;" onclick="window.location.href='404.html'">Subscribed</button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <img src="assets/mock_80x80_13.webp" style="border-radius: 50%; margin-bottom: 1rem;">
+          <h3>TechNinja</h3>
+          <button class="btn btn-outline mt-1" style="width: 100%; padding: 0.5rem;" onclick="window.location.href='404.html'">Subscribed</button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <img src="assets/mock_80x80_14.webp" style="border-radius: 50%; margin-bottom: 1rem;">
+          <h3>ChefJohn</h3>
+          <button class="btn btn-outline mt-1" style="width: 100%; padding: 0.5rem;" onclick="window.location.href='404.html'">Subscribed</button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <img src="assets/mock_80x80_15.webp" style="border-radius: 50%; margin-bottom: 1rem;">
+          <h3>AstroHub</h3>
+          <button class="btn btn-outline mt-1" style="width: 100%; padding: 0.5rem;" onclick="window.location.href='404.html'">Subscribed</button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <img src="assets/mock_80x80_16.webp" style="border-radius: 50%; margin-bottom: 1rem;">
+          <h3>DesignPro</h3>
+          <button class="btn btn-outline mt-1" style="width: 100%; padding: 0.5rem;" onclick="window.location.href='404.html'">Subscribed</button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+          <img src="assets/mock_80x80_17.webp" style="border-radius: 50%; margin-bottom: 1rem;">
+          <h3>DailyFitness</h3>
+          <button class="btn btn-outline mt-1" style="width: 100%; padding: 0.5rem;" onclick="window.location.href='404.html'">Subscribed</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-downloads" class="tab-content">
+      <div class="topbar reveal">
+        <h2>Downloads</h2>
+      </div>
+      <div class="content-section reveal">
+        <div style="background: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <i class="fa-solid fa-file-video" style="font-size: 2rem; color: var(--primary-color);"></i>
+            <div>
+              <h4>React Crash Course.mp4</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">450 MB • Downloaded yesterday</p>
+            </div>
+          </div>
+          <button class="btn" style="background: #333;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <i class="fa-solid fa-file-video" style="font-size: 2rem; color: var(--primary-color);"></i>
+            <div>
+              <h4>CSS Grid Masterclass.mp4</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">210 MB • Downloaded 3 days ago</p>
+            </div>
+          </div>
+          <button class="btn" style="background: #333;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        <div style="background: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <i class="fa-solid fa-file-video" style="font-size: 2rem; color: var(--primary-color);"></i>
+            <div>
+              <h4>The Future of AI.mp4</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">850 MB • Downloaded 1 week ago</p>
+            </div>
+          </div>
+          <button class="btn" style="background: #333;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-settings" class="tab-content">
+      <div class="topbar reveal">
+        <h2>Settings</h2>
+      </div>
+      <div class="content-section reveal">
+        <div style="background: var(--surface-color); padding: 2rem; border-radius: var(--radius-lg); max-width: 600px;">
+          <h3>Preferences</h3>
+          <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+            <div>
+              <strong>Email Notifications</strong>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Receive updates about new videos.</p>
+            </div>
+            <input type="checkbox" checked style="width: 20px; height: 20px;">
+          </div>
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong>Dark Mode</strong>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Enable dark theme globally.</p>
+            </div>
+            <input type="checkbox" checked style="width: 20px; height: 20px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="js/main.js?v=5"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</body>
+</html>

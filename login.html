@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Stackly</title>
+  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/login.css?v=5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="page-loader"><div class="loader-pulse"></div></div>
+  <div class="login-container">
+    <div class="animated-bg"></div>
+    <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="login-card reveal active">
+      <a href="index.html" class="nav-brand"><img src="./assets/logo.webp" alt="Stackly Logo" style="height: 50px; margin-right: 50px; vertical-align: middle;"></a>
+      <h2>Welcome Back</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" required placeholder="Enter username (any)">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" required placeholder="Enter password (any)">
+        </div>
+        <div class="form-group">
+          <label>Login As</label>
+          <select id="role-select" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+      <a href="signup.html" class="back-home">Don't have an account? Sign Up</a>
+    </div>
+  </div>
+  <script src="js/main.js?v=5"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</body>
+</html>
