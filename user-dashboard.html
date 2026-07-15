@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <div class="dashboard-bg"></div>
   <div id="page-loader"><div class="loader-pulse"></div></div>
 
   <div class="dashboard-mobile-header">
@@ -38,39 +39,54 @@
   <!-- Main Content -->
   <main class="main-content">
     <div id="tab-dashboard" class="tab-content active">
-      <div class="topbar reveal">
-      <h2>Welcome back, User</h2>
-      <div class="user-profile">
-        <span style="color: var(--text-secondary);">Premium Member</span>
-        <img src="assets/user-avatar.webp" onerror="this.src='https://via.placeholder.com/40/0000ff/ffffff?text=U'">
+      <div class="topbar reveal" style="background: linear-gradient(135deg, rgba(255, 0, 85, 0.15) 0%, rgba(20, 20, 25, 0.8) 100%); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(255,0,85,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); align-items: flex-start;">
+        <div>
+          <h2 class="gradient-text" style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome back, User!</h2>
+          <p style="color: var(--text-secondary);">Here is what's happening with your account today.</p>
+        </div>
+        <div class="user-profile" style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.1);">
+          <span style="color: var(--text-primary); font-weight: bold;">Premium Member</span>
+          <img src="assets/user-avatar.webp" style="width: 40px; height: 40px; border: 2px solid #ff0055;" onerror="this.src='https://via.placeholder.com/40/0000ff/ffffff?text=U'">
+        </div>
       </div>
-    </div>
 
     <!-- Stats -->
     <div class="stats-grid reveal">
       <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
-        <h4>Watch Time (This Week)</h4>
-        <div class="value">14.5 hrs</div>
+        <i class="fa-solid fa-clock stat-icon"></i>
+        <div class="stat-info">
+          <h4>Watch Time (This Week)</h4>
+          <div class="value gradient-text">14.5 hrs</div>
+        </div>
       </div>
       <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
-        <h4>Videos Watched</h4>
-        <div class="value">128</div>
+        <i class="fa-solid fa-play stat-icon"></i>
+        <div class="stat-info">
+          <h4>Videos Watched</h4>
+          <div class="value gradient-text">128</div>
+        </div>
       </div>
       <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
-        <h4>Favorite Category</h4>
-        <div class="value">Tech</div>
+        <i class="fa-solid fa-fire stat-icon"></i>
+        <div class="stat-info">
+          <h4>Favorite Category</h4>
+          <div class="value gradient-text">Tech</div>
+        </div>
       </div>
       <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="stat-card reveal">
-        <h4>Liked Videos</h4>
-        <div class="value">342</div>
+        <i class="fa-solid fa-heart stat-icon"></i>
+        <div class="stat-info">
+          <h4>Liked Videos</h4>
+          <div class="value gradient-text">342</div>
+        </div>
       </div>
     </div>
 
     <!-- Recommended Videos -->
     <div class="content-section reveal" style="transition-delay: 0.1s">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <h3>Recommended Videos</h3>
-        <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="window.location.href='404.html'">View All</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: nowrap; gap: 1rem;">
+        <h3 style="font-size: 1.2rem; margin: 0;">Recommended Videos</h3>
+        <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem; width: auto; flex-shrink: 0; white-space: nowrap;" onclick="window.location.href='404.html'">View All</button>
       </div>
       <div class="video-row">
         <div  data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" class="video-card-small reveal">
@@ -369,7 +385,7 @@
               <p style="color: var(--text-secondary); font-size: 0.9rem;">450 MB • Downloaded yesterday</p>
             </div>
           </div>
-          <button class="btn" style="background: #333;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+          <button class="btn btn-outline" style="border-color: #ff0033; color: #ff0033; width: auto; align-self: flex-end; padding: 0.5rem 1rem;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
         </div>
         <div style="background: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
           <div style="display: flex; gap: 1rem; align-items: center;">
@@ -379,7 +395,7 @@
               <p style="color: var(--text-secondary); font-size: 0.9rem;">210 MB • Downloaded 3 days ago</p>
             </div>
           </div>
-          <button class="btn" style="background: #333;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+          <button class="btn btn-outline" style="border-color: #ff0033; color: #ff0033; width: auto; align-self: flex-end; padding: 0.5rem 1rem;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
         </div>
         <div style="background: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
           <div style="display: flex; gap: 1rem; align-items: center;">
@@ -389,7 +405,7 @@
               <p style="color: var(--text-secondary); font-size: 0.9rem;">850 MB • Downloaded 1 week ago</p>
             </div>
           </div>
-          <button class="btn" style="background: #333;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
+          <button class="btn btn-outline" style="border-color: #ff0033; color: #ff0033; width: auto; align-self: flex-end; padding: 0.5rem 1rem;" onclick="window.location.href='404.html'"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>
     </div>

@@ -466,22 +466,55 @@ footer {
 
 /* Footer stacking */
 @media (max-width: 425px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
     text-align: center;
   }
-  .footer-col .nav-brand { margin: 0 auto 1rem !important; }
-  .footer-col .social-icons { justify-content: center !important; }
-  .navbar .nav-brand { margin: 0 !important; }
 }
 
-@media (max-width: 768px) {
-  .navbar .btn-login {
-    display: none !important;
-  }
+/* === DASHBOARD PREMIUM AMBIENT BACKGROUND === */
+.dashboard-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at 10% 20%, rgba(255, 0, 85, 0.25), transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(0, 204, 255, 0.25), transparent 45%),
+              radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.15), transparent 50%),
+              var(--bg-color);
+  background-size: 150% 150%;
+  animation: ambientShift 15s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
-/* Hide login button on mobile to save space */
+@keyframes ambientShift {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.1) translate(-2%, 2%); }
+  100% { transform: scale(1) translate(2%, -2%); }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff0055, #00ccff, #8a2be2);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: gradientFlow 5s linear infinite;
+}
+
+@keyframes gradientFlow {
+  to { background-position: 200% center; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem !important; }
+  .hero p { font-size: 1rem !important; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; text-align: center; }
+}
 @media (max-width: 768px) {
   .btn-login {
     display: none !important;

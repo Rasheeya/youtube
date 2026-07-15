@@ -1,17 +1,20 @@
 body {
       display: flex;
-      background: #0a0a0c;
+      background: radial-gradient(circle at top right, #1a050f 0%, #0f0f11 60%);
+      min-height: 100vh;
     }
     /* Sidebar */
     .sidebar {
       width: 250px;
-      background: var(--surface-color);
+      background: rgba(20, 20, 25, 0.6);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
       height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
       padding: 2rem 1rem;
-      border-right: 1px solid var(--border-color);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       flex-direction: column;
       z-index: 100;
@@ -31,14 +34,17 @@ body {
       padding: 0.8rem 1rem;
       border-radius: var(--radius-sm);
       color: var(--text-secondary);
-      transition: var(--transition-fast);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
       align-items: center;
       gap: 10px;
+      border-left: 3px solid transparent;
     }
     .sidebar-menu a:hover, .sidebar-menu a.active {
-      background: var(--primary-color);
+      background: linear-gradient(90deg, rgba(255, 0, 51, 0.15) 0%, transparent 100%);
       color: white;
+      border-left: 3px solid #ff0033;
+      transform: translateX(5px);
     }
     .sidebar-menu .logout {
       margin-top: auto;
@@ -68,8 +74,8 @@ body {
       gap: 10px;
     }
     .user-profile img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
     }
 
@@ -81,18 +87,37 @@ body {
       margin-bottom: 2rem;
     }
     .stat-card {
-      background: var(--surface-color);
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(25px);
       padding: 1.5rem;
       border-radius: var(--radius-md);
-      border: 1px solid var(--border-color);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
     }
-    .stat-card h4 {
+    .stat-card:hover {
+      border-color: rgba(255, 0, 85, 0.5);
+      box-shadow: 0 10px 30px rgba(255, 0, 85, 0.2);
+      transform: translateY(-5px);
+    }
+    .stat-icon {
+      font-size: 2rem;
+      color: #ff0055;
+      background: rgba(255, 0, 85, 0.1);
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 0, 85, 0.2);
+    }
+    .stat-info h4 {
       color: var(--text-secondary);
       font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
-    .stat-card .value {
-      font-size: 2rem;
+    .stat-info .value {
+      font-size: 1.8rem;
       font-weight: bold;
       color: white;
     }
@@ -117,10 +142,39 @@ body {
     }
     .video-card-small {
       min-width: 250px;
-      background: var(--surface-color);
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(25px);
       border-radius: var(--radius-md);
       overflow: hidden;
-      border: 1px solid var(--border-color);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .video-card-small::after {
+      content: '\f144';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      font-size: 3rem;
+      color: white;
+      opacity: 0;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      text-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
+      z-index: 10;
+    }
+    .video-card-small:hover {
+      border-color: rgba(255, 0, 85, 0.5);
+      box-shadow: 0 10px 30px rgba(255, 0, 85, 0.2);
+      transform: translateY(-5px);
+    }
+    .video-card-small:hover::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
     }
     .video-card-small img {
       width: 100%;
@@ -196,6 +250,10 @@ body {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
+  }
+  
+  .topbar .user-profile {
+    align-self: flex-end;
   }
   
   .search-box {
@@ -479,14 +537,14 @@ body {
     flex-direction: row !important;
     justify-content: flex-start !important;
     text-align: left !important;
-    font-size: 0.95rem !important;
-    padding: 0.8rem 1rem !important;
+    font-size: 1.2rem !important;
+    padding: 1rem 1.2rem !important;
     min-width: 0 !important;
   }
   
   .sidebar-menu a i {
-    font-size: 1.1rem !important;
-    width: 20px !important;
+    font-size: 1.4rem !important;
+    width: 26px !important;
   }
   
   .sidebar-overlay {

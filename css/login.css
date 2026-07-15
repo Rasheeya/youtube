@@ -88,6 +88,30 @@
       color: white;
     }
 
+    .floating-home-btn {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 100;
+      transition: var(--transition-fast);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .floating-home-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
 /* === FORMS RESPONSIVENESS === */
 @media (max-width: 768px) {
   .auth-container, .contact-wrapper, .form-container {
